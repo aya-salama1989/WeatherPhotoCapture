@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeatherPhotoCapture</string>
+    <string name="go_gallery">Go to Gallery</string>
+    <string name="capture_photo">Capture Photo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="share_photo">Photo Full View</string>
+    <string name="gallery">Gallery</string>
+</resources>
