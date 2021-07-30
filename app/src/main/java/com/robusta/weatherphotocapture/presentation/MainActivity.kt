@@ -1,7 +1,8 @@
-package com.robusta.weatherphotocapture
+package com.robusta.weatherphotocapture.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.robusta.weatherphotocapture.R
 
 
 class MainActivity : AppCompatActivity() {

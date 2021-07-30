@@ -1,4 +1,4 @@
-package com.robusta.weatherphotocapture.datasource
+package com.robusta.weatherphotocapture.presentation.datasource
 
 import com.robusta.weatherphotocapture.networking.WeatherAPI
 import com.robusta.weatherphotocapture.networking.WeatherAPIResponse

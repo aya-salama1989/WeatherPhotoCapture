@@ -1,4 +1,4 @@
-package com.robusta.weatherphotocapture.photo.gallery
+package com.robusta.weatherphotocapture.presentation.gallery
 
 import android.Manifest
 import android.net.Uri
@@ -37,6 +37,11 @@ class GalleryFragment : Fragment() {
             setLayout(view.rvGallery, it)
         })
 
+
+        viewModel.error.observe(viewLifecycleOwner,{
+            Toast.makeText(requireActivity(),"An error: ${it.localizedMessage}",Toast.LENGTH_LONG).show()
+        })
+
         if(!REQUIRED_PERMISSIONS.allPermissionsGranted(requireContext())){
             ActivityCompat.requestPermissions(
                 requireActivity(),
@@ -44,8 +49,6 @@ class GalleryFragment : Fragment() {
                 REQUEST_CODE_PERMISSIONS
             )
         }
-
-
         return view
     }
 

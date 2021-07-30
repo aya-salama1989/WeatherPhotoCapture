@@ -6,7 +6,7 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainFragment">
+    tools:context=".presentation.MainFragment">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_go_gallery"

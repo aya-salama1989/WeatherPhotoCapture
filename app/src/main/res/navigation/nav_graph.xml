@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/dest_mainFragment"
-        android:name="com.robusta.weatherphotocapture.MainFragment"
+        android:name="com.robusta.weatherphotocapture.presentation.MainFragment"
         android:label="@string/app_name"
         tools:layout="@layout/main_fragment" />
 
     <fragment
         android:id="@+id/dest_captureFragment"
-        android:name="com.robusta.weatherphotocapture.photo.capture.CapturePhotoFragment"
+        android:name="com.robusta.weatherphotocapture.presentation.capture.CapturePhotoFragment"
         android:label="@string/capture_photo"
         tools:layout="@layout/capture_photo_fragment" />
 
     <fragment
         android:id="@+id/dest_galleryFragment"
-        android:name="com.robusta.weatherphotocapture.photo.gallery.GalleryFragment"
+        android:name="com.robusta.weatherphotocapture.presentation.gallery.GalleryFragment"
         android:label="@string/gallery"
         tools:layout="@layout/gallery_fragment" />
 
     <fragment
         android:id="@+id/dest_photoFragment"
-        android:name="com.robusta.weatherphotocapture.photo.gallery.SharePhotoFragment"
+        android:name="com.robusta.weatherphotocapture.presentation.view.PhotoPreviewFragment"
         android:label="@string/share_photo"
         tools:layout="@layout/fragment_share_photo" />
 </navigation>

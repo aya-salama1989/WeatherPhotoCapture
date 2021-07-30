@@ -1,4 +1,4 @@
-package com.robusta.weatherphotocapture.photo.gallery
+package com.robusta.weatherphotocapture.presentation.gallery
 
 import android.net.Uri
 import android.view.LayoutInflater
