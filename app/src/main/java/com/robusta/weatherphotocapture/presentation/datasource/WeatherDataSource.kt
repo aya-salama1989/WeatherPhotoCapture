@@ -3,11 +3,14 @@ package com.robusta.weatherphotocapture.presentation.datasource
 import com.robusta.weatherphotocapture.networking.WeatherAPI
 import com.robusta.weatherphotocapture.networking.WeatherAPIResponse
 
-class WeatherDataSource {
+/**
+ * WeatherDataSource class
+ */
 
-    suspend fun getWeatherData(cityId: String): WeatherAPIResponse {
+class WeatherDataSource {
+    suspend fun getWeatherData(cityName: String): WeatherAPIResponse {
         val weatherAPI = WeatherAPI()
-        return weatherAPI.retrofitService.listRepos(cityId, "62db48c28406207c7acb8653397b5994")
+        return weatherAPI.retrofitService.listRepos(cityName, "62db48c28406207c7acb8653397b5994")
     }
 
 }

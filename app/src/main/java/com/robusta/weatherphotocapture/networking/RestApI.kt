@@ -6,12 +6,15 @@ import retrofit2.http.Query
 
 interface RestApIService {
     @GET("/data/2.5/weather")
-    suspend fun listRepos(@Query("q") cityId: String,@Query("appid") apiKey: String): WeatherAPIResponse
+    suspend fun listRepos(
+        @Query("q") cityName: String,
+        @Query("appid") apiKey: String
+    ): WeatherAPIResponse
 }
 
 
 class WeatherAPI {
-    val retrofitService : RestApIService by lazy {
+    val retrofitService: RestApIService by lazy {
         retrofit.create(RestApIService::class.java)
     }
 }

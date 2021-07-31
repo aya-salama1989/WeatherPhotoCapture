@@ -83,9 +83,9 @@ class PhotoPreviewFragment : Fragment() {
         val p = photo.convertToBitmap()
         view.ivFullPhoto.setImageBitmap(p.rotateBitMap(90))
         previewModel.temperature.observe(viewLifecycleOwner, {
-            view.tv_temprature.text = it.temp.toString()
+            view.tv_temprature.text = it.temp
             view.tv_city_name.text = cityName
-            view.tv_weather_condition.text = "Feels like: ${it.feelsLike}"
+            view.tv_weather_condition.text = it.conditions
         })
 
         view.btn_save.visibility = View.VISIBLE

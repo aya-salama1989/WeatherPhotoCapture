@@ -9,6 +9,8 @@ import androidx.lifecycle.MutableLiveData
 import com.robusta.weatherphotocapture.presentation.datasource.PhotoDataSource
 import com.robusta.weatherphotocapture.presentation.datasource.WeatherDataSource
 import com.robusta.weatherphotocapture.networking.Main
+import com.robusta.weatherphotocapture.presentation.repository.Weather
+import com.robusta.weatherphotocapture.presentation.repository.WeatherRepo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -16,13 +18,13 @@ import kotlinx.coroutines.launch
 
 class PhotoPreviewVM(application: Application) : AndroidViewModel(application) {
 
-    private val weatherDataSource = WeatherDataSource()
+    private val weatherrepo = WeatherRepo()
 
     private var viewModelJob = Job()
     private val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main)
 
-    private var _temperature: MutableLiveData<Main> = MutableLiveData()
-    val temperature: LiveData<Main>
+    private var _temperature: MutableLiveData<Weather> = MutableLiveData()
+    val temperature: LiveData<Weather>
         get() = _temperature
 
     private var _navigateToGallery: MutableLiveData<Boolean> = MutableLiveData()
@@ -31,9 +33,9 @@ class PhotoPreviewVM(application: Application) : AndroidViewModel(application) {
 
     fun getWeatherData(cityName: String) {
         coroutineScope.launch {
-            val data = weatherDataSource.getWeatherData(cityName)
+            val data = weatherrepo.getWeatherData(cityName)
             try {
-                _temperature.value = data.main
+                _temperature.value = data
             } catch (e: Exception) {
                 Log.e("error", data.toString())
             }

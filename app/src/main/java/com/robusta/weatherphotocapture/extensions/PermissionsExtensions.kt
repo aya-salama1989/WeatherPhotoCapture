@@ -4,8 +4,10 @@ import android.content.Context
 import android.content.pm.PackageManager
 import androidx.core.content.ContextCompat
 
+/**
+ * Kotlin file specified for permissions extension functions
+ */
 
-//get permissions
 fun Array<String>.allPermissionsGranted(context: Context) = all {
     ContextCompat.checkSelfPermission(
         context, it
